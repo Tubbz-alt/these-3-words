@@ -4,7 +4,7 @@
   <!-- Meta -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>These3Words Map</title>
+  <title>These4Words Map</title>
   <!-- Style -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="/static/css/style.css">
@@ -17,9 +17,9 @@
     <aside class="alert alert-danger" role="alert">Error: {{ err }}</aside>
     % end
     <main class="jumbotron">
-      <h1>These3Words Map</h1>
+      <h1>These4Words Map</h1>
       <p class="lead">
-        Remember a location anywhere in the world with just three words.
+        Remember a location anywhere in the world with just four words.
       </p>
       <p class="text-warning">This is hot off the press. We are still
       finalising the word list so locations might not be
@@ -27,8 +27,8 @@
       antarctic resupply drop quite yet!</p>
       <p>
 	<ul class="lead">
-	  <li>Type in a location to find out the three words by which to remember it (try <i>1600 Pennsylvania avenue ...</i>)</li>
-	  <li>To find the location referenced by a set of three words given to you, type them in separated by a dash (try <i>{{ sydney }}</i>)</li>
+	  <li>Type in a location to find out the four words by which to remember it (try <i>1600 Pennsylvania avenue ...</i>)</li>
+	  <li>To find the location referenced by a set of four words given to you, type them in separated by a dash (try <i>{{ sydney }}</i>)</li>
 	  <li>Go straight to exploring the map by clicking the <i>Find on Map</i> button, it will take you to Sydney</li>
 	</ul>
       </p>
@@ -66,7 +66,7 @@
           These3Words.apiGetFromLatLng(place.geometry.location,
                                        function(status, data) {
               if (status >= 200 && status < 400) {
-                window.location = "/" + data.three;
+                window.location = "/" + data.four;
               }
           });
         } else {
